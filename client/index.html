@@ -1,0 +1,31 @@
+<head>
+  <title>Welcome to Mercury</title>
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+
+<div id="wrapper">
+  {{> header}}
+
+  {{yield}}
+
+  {{> footer}}
+</div>
+
+</template>
+
+<template name="notFound">
+
+  <h1>Sorry, we couldn't find the content you're looking for.</h1>
+
+</template>
+
+<template name="loading">
+
+  <h1>Loading...</h1>
+
+</template>
+

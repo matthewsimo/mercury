@@ -1,0 +1,15 @@
+
+<template name="footer">
+  <footer id="main-footer">
+    <nav>
+      {{#if footerPages}}
+      <ul>
+      {{#each footerPages}}
+        <li><a href="{{slug}}">{{name}}</a></li>
+      {{/each}}
+      </ul>
+      {{/if}}
+    </nav>
+  </footer>
+</template>
+
