@@ -64,9 +64,39 @@ Pages = new Meteor.Collection("pages", {
   }])
 });
 
+
 //Comments = new Meteor.Collection("comments", {
 //  schema: new SimpleSchema([entrySchema, {
 //
 //  }])
 //});
+
+
+
+navItemSchema = new SimpleSchema({
+  text: {
+    type: String,
+    label: "Nav Item Text",
+    max: 200
+  },
+  path: {
+    type: String,
+    label: "Nav Item Path",
+  },
+});
+
+navSchema = new SimpleSchema({
+  items: {
+    type: [navItemSchema],
+    label: "Nav Items"
+  }
+});
+
+HeaderNavItems = new Meteor.Collection("headerNavItems", {
+  schema: new SimpleSchema([navSchema, {}])
+});
+
+FooterNavItems = new Meteor.Collection("footerNavItems", {
+  schema: new SimpleSchema([navSchema, {}])
+});
 
